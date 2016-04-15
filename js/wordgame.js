@@ -11,7 +11,14 @@ WordGame = function()
     // ^a-z: negation of the patterns (matches anything NOT included)
     // g: global match (does not stop at first match)
     // '': the char to replace the matched letters with
-    var baseString = Math.random().toString(36).replace(/[^a-z]+/g, '');
+
+    var MIN_STR_LENGTH = 6;
+    var baseString;
+    do
+    {
+        baseString = Math.random().toString(36).replace(/[^a-z]+/g, '');
+    }
+    while(baseString.length < MIN_STR_LENGTH);
     var MAX_POSITIONS = 10;
     var highScores = new Array(MAX_POSITIONS);
 
