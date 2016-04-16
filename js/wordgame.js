@@ -47,7 +47,7 @@ A word can only appear ONCE in the high score list. If the word is already prese
                     break;
                 }
             if (found === false)
-                return "Please use only letters present in your base string!";
+                return this.outcomes[1];
         }
 
         if(word in MYAPP.dictionary)
@@ -59,12 +59,12 @@ A word can only appear ONCE in the high score list. If the word is already prese
                     this.insertInHighScores(word);
                     return true;
                 }
-                return "The word is valid, but its not lengthy enough to enter the Hall of fame. Sorry!";
+                return this.outcomes[2];
 
             }
-            return "That word's already been found!";
+            return this.outcomes[3];
         }
-        return "That word is not in the dictionary! Go learn some english, dude.";
+        return this.outcomes[4];
     };
 
 /*
@@ -138,4 +138,12 @@ What is your favourite color? Please put your answer in your submission (this is
             console.log((i + 1) + ": " + currWord);
         }
     };
+};
+
+WordGame.prototype.outcomes = // Simulate enum
+{
+    1 : "Please use only letters present in your base string!",
+    2 : "The word is valid, but its not lengthy enough to enter the Hall of fame. Sorry!",
+    3 : "That word's already been found!",
+    4 : "That word is not in the dictionary! Go learn some english, dude."
 };

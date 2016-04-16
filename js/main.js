@@ -27,4 +27,5 @@ MYAPP.loadDictionary = function(relativePath)
 $(document).ready(function()
 {
     MYAPP.loadDictionary('res/wordlist.txt');
+
 });
