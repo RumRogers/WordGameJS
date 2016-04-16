@@ -1,5 +1,5 @@
 /*
-This test tries to submit a bunch of senseless words which include letters NOT present within the base string.
+This test tries to submit a bunch of words which include letters NOT present within the base string.
 The expected outcome is they're rejected for the presence of such letters, not because they're not included
 in the dictionary.
  */
@@ -11,7 +11,7 @@ MYAPP.tests.push(function()
 
     try
     {
-        var invalid_words = ["wyz", "rsd", "jkl", "123", "whatener"];
+        var invalid_words = ["wyz", "rsd", "jkl", "123", "whatener", "test"];
 
         // Every word should be accepted just once
         for (var i = 0; i < invalid_words.length; i++)
