@@ -56,5 +56,5 @@ MYAPP.tests.push(function()
     {
         return ex.message;
     }
-    return "Test passed!";
+    return "Test 1 passed!";
 });
