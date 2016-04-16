@@ -12,8 +12,7 @@ MYAPP.tests.push(function()
     try
     {
         var invalid_words = ["wyz", "rsd", "jkl", "123", "whatener", "test"];
-
-        // Every word should be accepted just once
+        
         for (var i = 0; i < invalid_words.length; i++)
         {
             // must be rejected, contains letters not present in base string!
