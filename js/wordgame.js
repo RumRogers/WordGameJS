@@ -138,6 +138,12 @@ What is your favourite color? Please put your answer in your submission (this is
             console.log((i + 1) + ": " + currWord);
         }
     };
+
+     // todo: USED FOR TESTING PURPOSES ONLY! TO BE EVENTUALLY REMOVED!
+    this.setBaseString = function(str)
+    {
+        baseString = str;
+    };
 };
 
 WordGame.prototype.outcomes = // Simulate enum

@@ -1,5 +1,8 @@
 var MYAPP = MYAPP || {};
 
+var DEBUG = true;
+MYAPP.tests = []; // todo: Remove in release version
+
 MYAPP.loadDictionary = function(relativePath)
 {
     $.ajax({
@@ -16,6 +19,10 @@ MYAPP.loadDictionary = function(relativePath)
 
             MYAPP.wordGame = new WordGame();
             MYAPP.wordGame.getBaseString();
+
+            if(DEBUG === true)
+                for(var i = 0; i < MYAPP.tests.length; i++)
+                    console.log(MYAPP.tests[i]());
         },
         error : function()
         {
